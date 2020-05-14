@@ -1,0 +1,15 @@
+[package]
+name = "eth_pairings_go_2537"
+version = "0.2.0"
+authors = ["Alex Vlasov <alex.m.vlasov@gmail.com>"]
+edition = "2018"
+description = "EIP2537 implementation bingings to Go"
+homepage = "https://github.com/matter-labs/eip1962"
+license = "Apache-2.0"
+build = "build.rs"
+
+[dev-dependencies]
+hex = "*"
+
+[features]
+default = []
