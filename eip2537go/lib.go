@@ -6,8 +6,7 @@ import (
 	"unsafe"
 
 	"github.com/ethereum/go-ethereum/common"
-
-	eip "github.com/kilic/eip2537"
+	"github.com/ethereum/go-ethereum/core/vm"
 )
 
 const (
@@ -36,23 +35,23 @@ func c_eip2537_perform_operation(op C.char, i *C.char, iLen uint32, o *C.char, o
 
 	switch opType {
 	case G1ADD_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0a})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0a})].Run(iBuff)
 	case G1MUL_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0b})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0b})].Run(iBuff)
 	case G1MULTIEXP_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0c})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0c})].Run(iBuff)
 	case G2ADD_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0d})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0d})].Run(iBuff)
 	case G2MUL_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0e})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0e})].Run(iBuff)
 	case G2MULTIEXP_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x0f})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x0f})].Run(iBuff)
 	case PAIR_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x10})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x10})].Run(iBuff)
 	case MAP_FP_TO_G1_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x11})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x11})].Run(iBuff)
 	case MAP_FP2_TO_G2_OPERATION_RAW_VALUE:
-		res, err = eip.PrecompiledContractsBerlinOnly[common.BytesToAddress([]byte{0x12})].Run(iBuff)
+		res, err = vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x12})].Run(iBuff)
 	default:
 		err = errors.New("invalid operation type")
 	}

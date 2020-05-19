@@ -1,6 +1,6 @@
 module github.com/shamatar/eip2537gowrapper
 
-go 1.12
+go 1.14
 
 require (
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
@@ -13,3 +13,5 @@ require (
 	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37 // indirect
 	golang.org/x/sys v0.0.0-20200515095857-1151b9dac4a9 // indirect
 )
+
+replace github.com/ethereum/go-ethereum => github.com/kilic/go-ethereum v1.9.14-0.20200518185416-fc0bed46c752

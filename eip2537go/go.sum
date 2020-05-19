@@ -139,6 +139,8 @@ github.com/kilic/bls12-381 v0.0.0-20200429194728-f68242f46180 h1:xEyKa0fW9qhjCkA
 github.com/kilic/bls12-381 v0.0.0-20200429194728-f68242f46180/go.mod h1:INznczsRc7ASFbWFUI9GnIvpi9s2FhenKE+24rdTmBQ=
 github.com/kilic/eip2537 v0.0.0-20200501213203-488a42b21e5d h1:eEyNHKdNcHzlArapo+3CYwD92o0FseZYYqmxI5j1YTM=
 github.com/kilic/eip2537 v0.0.0-20200501213203-488a42b21e5d/go.mod h1:OTJlBwb2kcT/Cz9YpWzRv5A1KKEP4watNnxgfmim4ic=
+github.com/kilic/go-ethereum v1.9.14-0.20200518185416-fc0bed46c752 h1:pT+evclfumqlWhGigdcZAHECTm0j1gl91A4JNe7Ny4Y=
+github.com/kilic/go-ethereum v1.9.14-0.20200518185416-fc0bed46c752/go.mod h1:oP8FC5+TbICUyftkTWs+8JryntjIJLJvWvApK3z2AYw=
 github.com/kkdai/bstream v0.0.0-20161212061736-f391b8402d23/go.mod h1:J+Gs4SYgM6CZQHDETBtE9HaSEkGmuNXF86RwHhHUvq4=
 github.com/klauspost/compress v1.9.8/go.mod h1:RyIbtBH6LamlWaDj8nUwkbUhJ87Yi3uG0guNDohfE1A=
 github.com/klauspost/compress v1.10.1/go.mod h1:aoV0uJVorq1K+umq18yTdKaF57EivdYsUV+/s2qKfXs=
