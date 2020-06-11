@@ -9,8 +9,10 @@ import (
 )
 
 func Test(t *testing.T) {
+	precompilesMap := vm.PrecompiledContractsYoloV1
+
 	input := make([]byte, 128)
-	res, err := vm.PrecompiledContractsBerlin[common.BytesToAddress([]byte{0x12})].Run(input)
+	res, err := precompilesMap[common.BytesToAddress([]byte{0x12})].Run(input)
 	t.Log(hex.EncodeToString(res))
 	t.Log(err)
 }
