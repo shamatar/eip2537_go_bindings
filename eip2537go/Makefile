@@ -20,6 +20,10 @@ external: clean build_external
 
 static_external: clean build_static_external
 
+static_external_adx: clean build_static_external_adx
+
+static_external_asm: clean build_static_external_asm
+
 build: 
 		CGO_ENABLED=1 $(GOBUILD) -o $(LIB_DIR)/$(LIBARY_FULL_NAME) -buildmode=c-shared $(SRC)/lib.go		
 build_static: 
@@ -28,6 +32,10 @@ build_external:
 		CGO_ENABLED=1 $(GOBUILD) -o $(OUT_DIR)/$(LIBARY_FULL_NAME) -buildmode=c-shared $(SRC)/lib.go	
 build_static_external: 
 		CGO_ENABLED=1 $(GOBUILD) -o $(OUT_DIR)/$(ARCHIVE_FULL_NAME) -buildmode=c-archive $(SRC)/lib.go	
+build_static_external_adx: 
+		CGO_ENABLED=1 $(GOBUILD) --tags=blsadx -o $(OUT_DIR)/$(ARCHIVE_FULL_NAME) -buildmode=c-archive $(SRC)/lib.go
+build_static_external_asm: 
+		CGO_ENABLED=1 $(GOBUILD) --tags=blsasm -o $(OUT_DIR)/$(ARCHIVE_FULL_NAME) -buildmode=c-archive $(SRC)/lib.go
 clean: 
 		$(GOCLEAN)
 		rm -f $(LIB_DIR)/*
